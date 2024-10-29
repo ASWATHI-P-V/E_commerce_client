@@ -1,0 +1,41 @@
+.footer {
+    background-color: #2e7d32;
+    padding: 20px;
+    color: white;
+    text-align: center;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+  
+  .footer-info h4 {
+    margin-bottom: 8px;
+  }
+  
+  .footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 5px 15px;
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-contact p {
+    margin: 5px 0;
+  }
+  
+  .footer-contact p:last-child {
+    margin-bottom: 15px;
+  }
+  
+  .footer p {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
