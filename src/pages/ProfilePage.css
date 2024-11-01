@@ -1,0 +1,52 @@
+/* ProfilePage.css */
+
+/* Main container styling */
+.profile-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+/* Page header */
+.profile-container h2 {
+    text-align: center;
+    color: #333;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+/* Error message styling */
+.error {
+    color: #d9534f;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Profile details styling */
+.profile-details {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+.profile-details p {
+    margin: 10px 0;
+}
+
+.profile-details strong {
+    color: #333;
+    font-weight: 600;
+}
+
+/* Loading message styling */
+.profile-container p {
+    text-align: center;
+    color: #777;
+    font-style: italic;
+    font-size: 0.9em;
+}

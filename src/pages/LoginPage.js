@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import './LoginPage.css'; // Importing the CSS file
 
 const LoginPage = () => {
   const navigate = useNavigate();
@@ -13,18 +14,32 @@ const LoginPage = () => {
       localStorage.setItem('token', res.data.token);
       // Redirect to products page
       navigate('/products');
-
     } catch (err) {
       console.error('Error logging in');
     }
   };
 
   return (
-    <div>
+    <div className="login-container">
       <h2>Login</h2>
-      <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" />
-      <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" />
-      <button onClick={handleLogin}>Login</button>
+      <input 
+        type="email" 
+        value={email} 
+        onChange={(e) => setEmail(e.target.value)} 
+        placeholder="Email" 
+        className="login-input"
+      />
+      <input 
+        type="password" 
+        value={password} 
+        onChange={(e) => setPassword(e.target.value)} 
+        placeholder="Password" 
+        className="login-input"
+      />
+      <button onClick={handleLogin} className="login-button">Login</button>
+      <p className="signup-prompt">Don't have an account? 
+        <span className="signup-link" onClick={() => navigate('/signup')}> Sign Up</span>
+      </p>
     </div>
   );
 };
