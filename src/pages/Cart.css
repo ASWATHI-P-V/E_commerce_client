@@ -65,19 +65,16 @@
     background-color: #ff7875;
 }
 
-/* Checkout button styles */
+
 .checkout-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-top: 20px;
-    width: 100%;
-    max-width: 200px;
+  padding: 10px;
+  background-color: #4CAF50; 
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px; 
+  width: 50px;
 }
 
 .checkout-button:hover {
@@ -89,7 +86,7 @@
     cursor: not-allowed;
 }
 
-/* Responsive styles */
+
 @media (max-width: 768px) {
     .cart-item {
         flex-direction: column;
@@ -123,6 +120,6 @@
     .checkout-button {
         padding: 8px 16px;
         font-size: 14px;
-        max-width: 150px;
+        max-width: 100px;
     }
 }

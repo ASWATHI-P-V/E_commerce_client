@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import './SignUp.css'; // Import the CSS file for styling
+import './SignUp.css'; 
 
 const SignUp = () => {
     const [email, setEmail] = useState('');
@@ -14,7 +14,7 @@ const SignUp = () => {
     const navigate = useNavigate();
 
     const handleSignUp = async () => {
-        setError(''); // Clear any previous errors
+        setError(''); 
         try {
             const response = await axios.post('http://localhost:5000/api/register', {
                 email, 

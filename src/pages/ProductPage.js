@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './ProductPage.css'; // Assuming you have some styling
+import './ProductPage.css'; 
 
 const ProductPage = ({ addToCart }) => {
   const [products, setProducts] = useState([]);

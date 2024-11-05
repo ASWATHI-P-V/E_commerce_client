@@ -1,12 +1,10 @@
-/* LoginPage.css */
-
 .login-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh; /* Full height */
-  background-color: #f9f9f9; /* Light background color */
+  height: 100vh;
+  background-color: #f9f9f9;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
@@ -17,39 +15,39 @@ h2 {
 }
 
 .login-input {
-  width: 300px; /* Fixed width */
+  width: 300px;
   padding: 10px;
-  margin: 10px 0; /* Space between inputs */
+  margin: 10px 0;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
 
 .login-button {
   padding: 10px;
-  background-color: #4CAF50; /* Green */
+  background-color: #4CAF50;
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  margin-top: 10px; /* Space above the button */
+  margin-top: 10px;
   width: 150px;
 }
 
 .login-button:hover {
-  background-color: #45a049; /* Darker green */
+  background-color: #45a049;
 }
 
 .signup-prompt {
-  margin-top: 15px; /* Space above prompt */
+  margin-top: 15px;
   font-size: 14px;
 }
 
 .signup-link {
-  color: #4CAF50; /* Green */
+  color: #4CAF50;
   cursor: pointer;
-  margin-left: 5px; /* Space between text */
+  margin-left: 5px;
 }
 
 .signup-link:hover {
-  text-decoration: underline; /* Underline on hover */
+  text-decoration: underline;
 }

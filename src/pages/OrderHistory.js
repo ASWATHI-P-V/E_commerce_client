@@ -1,4 +1,3 @@
-// OrderHistory.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './OrderHistory.css';
@@ -6,15 +5,17 @@ import './OrderHistory.css';
 const OrderHistory = () => {
   const [orders, setOrders] = useState([]);
   const [error, setError] = useState('');
+  const user = JSON.parse(localStorage.getItem('user'));
 
   useEffect(() => {
     const fetchOrderHistory = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/orderhistory');
+        const res =  await axios.post('http://localhost:5000/api/orderhistory', { userId: user._id });
         setOrders(res.data);
-      } catch (err) {
-        setError('Failed to fetch order history.');
-        console.error(err);
+      }
+      catch (err) {
+        console.error('Error fetching order history:', err);
+        setError('Failed to fetch order history');
       }
     };
 

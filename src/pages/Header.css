@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #2e7d32;
+    background-color: #266485;
     padding: 10px 20px;
     color: white;
   }
@@ -25,3 +25,13 @@
     text-decoration: underline;
   }
   
+  .logout-button{
+    background-color: #266485;
+    color: rgb(243, 236, 236);
+    font-weight: bold;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100px;
+  }

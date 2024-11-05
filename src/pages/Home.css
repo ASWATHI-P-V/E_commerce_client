@@ -1,0 +1,325 @@
+.home-container {
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.section-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #333;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/home/aswathi/Documents/workspace/Medical_store/client/public/images/medical_background.jpg') no-repeat center center/cover;
+  z-index: -1;
+  opacity: 0.7;
+  filter: blur(2px);
+}
+
+.content {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #004d40;
+  font-family: 'Arial', sans-serif;
+}
+
+.animated-heading {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #00796b;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.animated-paragraph {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin: 15px 0;
+  color: #00695c;
+  font-weight: 400;
+  font-family: 'Georgia', serif;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.info-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  max-width: 250px;
+  text-align: left;
+}
+
+.icon-container {
+  flex-shrink: 0;
+  margin-right: 10px;
+}
+
+.icon-container img {
+  width: 40px;
+  height: 40px;
+}
+
+.info-content h3 {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+.info-content p {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 5px 0 0;
+}
+
+@media (max-width: 768px) {
+  .info-section {
+      flex-direction: column;
+      gap: 20px;
+  }
+}
+
+.services-section {
+  padding: 60px 20px;
+  background-color: #b3c8f1;
+  text-align: center;
+}
+
+.services-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #131212;
+  animation: fadeInDown 1s ease-out;
+  transition: transform 0.3s ease;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.service-item {
+  background-color: #fff;
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  opacity: 0;
+  animation: fadeInUp 1s forwards;
+}
+
+.service-item:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.service-item:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.service-item:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.service-item:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+.service-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.service-item h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #00796b;
+}
+
+.service-item p {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .services-section h2 {
+      font-size: 2rem;
+  }
+
+  .service-item h3 {
+      font-size: 1.5rem;
+  }
+
+  .service-item p {
+      font-size: 1rem;
+  }
+}
+
+.testimonials-section {
+  padding: 40px;
+  background-color: #f9f9f9;
+  text-align: center;
+  overflow: hidden;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+  animation: fadeInDown 1s ease;
+}
+
+.testimonials {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.testimonial-item {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 250px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: calc(var(--i) * 0.5s);
+}
+
+.testimonial-item p {
+  font-style: italic;
+  color: #555;
+}
+
+.testimonial-item span {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+.medical-store-section-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f8ff;
+  padding: 20px;
+}
+
+.medical-store-background {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  flex-wrap: wrap;
+}
+
+.image-container {
+  flex: 1;
+  max-width: 600px;
+  animation: slideInLeft 1.5s ease-in-out;
+}
+
+.animated-image {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.animated-image:hover {
+  transform: scale(1.05);
+}
+
+.text-container {
+  flex: 1;
+  padding-left: 40px;
+  animation: slideInRight 1.5s ease-in-out;
+  max-width: 600px;
+}
+
+.animated-text {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+  opacity: 0;
+  animation: fadeInUp 2s forwards;
+  transition: color 0.3s ease;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.animated-text:hover {
+  color: #696363;
+}
+
+@media (max-width: 768px) {
+  .medical-store-background {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .text-container {
+      padding-left: 0;
+      text-align: center;
+      padding-top: 20px;
+  }
+
+  .animated-text {
+      font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .animated-text {
+      font-size: 1.2rem;
+  }
+
+  .image-container {
+      max-width: 100%;
+  }
+
+  .text-container {
+      max-width: 100%;
+  }
+
+  .medical-store-section-container {
+      padding: 10px;
+  }
+}

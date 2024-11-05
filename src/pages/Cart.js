@@ -1,23 +1,16 @@
-// Cart.js
-import React from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import './Cart.css';
+import { useNavigate } from 'react-router-dom';
 
 const Cart = ({ cartItems, removeFromCart }) => {
+  const [creditCard, setCreditCard] = useState('');
+  const user = JSON.parse(localStorage.getItem('user'));
+  const navigate = useNavigate();
+
   const calculateTotal = () => {
     return cartItems.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2);
   };
-  
-  // router.post('/checkout', authenticateToken, async (req, res) => {
-  //   const { items, total, date } = req.body;
-  //   try {
-  //     const order = new OrderHistory({ items, total, date });
-  //     await order.save();
-  //     res.json(order);
-  //   } catch (err) {
-  //     res.status(500).send('Server error');
-  //   }
-  // });
 
   const handleCheckout = async () => {
     try {
@@ -25,12 +18,35 @@ const Cart = ({ cartItems, removeFromCart }) => {
         items: cartItems,
         total: calculateTotal(),
         date: new Date().toISOString(),
+        userId: user._id,
       });
       console.log(res.data);
+      alert('Checkout successful!');
+      navigate('/'); 
+
+
     } catch (err) {
-      console.error('Error:', err); // Log the error
+      if (err.response && err.response.data.error === 'Credit card details required') {
+        const enteredCard = prompt('Please enter your credit card details:');
+        if (enteredCard) {
+          try {
+            
+            await axios.put(`http://localhost:5000/api/users/${user._id}/update-card`, { creditCard: enteredCard });
+            setCreditCard(enteredCard);
+            alert('Card details saved! Proceeding with checkout...');
+            handleCheckout(); 
+          } catch (updateErr) {
+            console.error('Error updating card details:', updateErr);
+          }
+        } else {
+          alert('Checkout canceled: Credit card details are required.');
+        }
+      } else {
+        console.error('Error:', err); 
+      }
     }
   };
+
   return (
     <div className="cart-container">
       <h2>Your Cart</h2>
@@ -53,7 +69,9 @@ const Cart = ({ cartItems, removeFromCart }) => {
         </ul>
       )}
       <h3>Total: ${calculateTotal()}</h3>
-      <button onClick={handleCheckout} className="checkout-button">Checkout</button>
+      
+     {cartItems.length > 0 && <button onClick={handleCheckout}>Checkout</button>}
+      
     </div>
   );
 };

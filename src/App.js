@@ -8,6 +8,7 @@ import SignUp from './pages/SignUp';
 import Cart from './pages/Cart';
 import Header from './pages/Header';
 import Footer from './pages/Footer';
+import Home from './pages/Home';
 
 function App() {
   console.log("App is rendering..."); 
@@ -54,7 +55,7 @@ function App() {
             <Footer />
           </div>
         }>
-          <Route index element={<h1>Welcome to the Medical Store</h1>} /> 
+          <Route index element={<Home />} /> 
           <Route path="*" element={<h2>404 Page Not Found</h2>} />
           <Route path="/products" element={<ProductPage addToCart={addToCart} />} />
           <Route path="/profile" element={<ProfilePage />} />
