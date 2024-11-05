@@ -9,7 +9,7 @@ const SignUp = () => {
     const [name, setName] = useState('');
     const [username, setUsername] = useState('');
     const [address, setAddress] = useState('');
-    const [mobile, setMobile] = useState('');
+    const [phone, setPhone] = useState('');
     const [error, setError] = useState('');
     const navigate = useNavigate();
 
@@ -22,7 +22,7 @@ const SignUp = () => {
                 name,
                 username,
                 address,
-                mobile
+                phone
             });
             localStorage.setItem('token', response.data.token);
 
@@ -75,9 +75,9 @@ const SignUp = () => {
             />
             <input 
                 type="text" 
-                value={mobile} 
-                onChange={(e) => setMobile(e.target.value)} 
-                placeholder="Mobile" 
+                value={phone} 
+                onChange={(e) => setPhone(e.target.value)} 
+                placeholder="Phone" 
                 className="signup-input"
             />
             <button onClick={handleSignUp} className="signup-button">Sign Up</button>
