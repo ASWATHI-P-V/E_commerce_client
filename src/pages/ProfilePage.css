@@ -47,3 +47,20 @@
     font-style: italic;
     font-size: 0.9em;
 }
+
+.btn{
+    padding: 10px;
+    background-color: #4CAF50; 
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px; 
+    width: 100px;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .btn:hover {
+      background-color: #45a049;
+  }

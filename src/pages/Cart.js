@@ -70,10 +70,11 @@ const Cart = ({ cartItems, removeFromCart }) => {
       )}
       <h3>Total: ${calculateTotal()}</h3>
       
-     {cartItems.length > 0 && <button onClick={handleCheckout}>Checkout</button>}
+     {cartItems.length > 0 && <button onClick={handleCheckout} className="checkout-button">Checkout</button>}
       
     </div>
   );
 };
 
 export default Cart;
+
