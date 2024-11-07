@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+Medical Store E-commerce Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Project Overview
 
-## Available Scripts
+This project is a full-stack e-commerce website for a medical store, built using Node.js, Express.js, React.js, and MongoDB. The application allows users to register, login, view product information, add products to cart, and view order history.
 
-In the project directory, you can run:
+Features
 
-### `npm start`
+- User registration with email and password (password hashing using bcrypt)
+- Login validation with email and password
+- User profile page with editable information
+- Unique email validation
+- Product catalog with drug name, company name, price, and current stock
+- Item detail page with price, stock, and mock add-to-cart functionality
+- Order history page displaying past orders with product details and stock at the time of order
+- Credit card input validation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Tech Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Frontend: React.js
+- Backend: Node.js, Express.js
+- Database: MongoDB
+- Password Hashing: bcrypt
 
-### `npm test`
+Database Collections
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Users: stores user information (email, password, name, etc.)
+- Products: stores product information (drug name, company name, price, stock, etc.)
+- Order History: stores user order history with product details and stock at the time of order
 
-### `npm run build`
+Functionality
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Users can register and login to their accounts
+- Users can view and update their profile information
+- Users can browse products and view item details
+- Users can add products to cart (mock functionality)
+- Users can view their order history
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Installation and Setup
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the repository
+2. Install dependencies using npm install
+3. Start the backend server using node server.js
+4. Start the frontend server using npm start
+5. Access the application at http://localhost:3000
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+API Endpoints
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- /api/register: user registration
+- /api/login: user login
+- /api/profile: user profile information
+- /api/products: product catalog
+- /api/orders: order history
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Screencast Demo
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+A screencast demo of the application is available at: 
+https://drive.google.com/drive/folders/1Rh4aiM_BTAt5fTn0dQ8xON_KzKl2-L3v?usp=drive_link
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Future Enhancements
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Implement payment gateway integration
+- Enhance security measures
 
-### Code Splitting
+Contributors
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Aswathi PV
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
